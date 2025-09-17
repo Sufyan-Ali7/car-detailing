@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link href='/about'><li className='text-[16px] hover:text-white/70 transition'>About</li></Link>
         <Link href='/contact'><li className='text-[16px] hover:text-white/70 transition'>Contact</li></Link>
       </ul>
-      <button className='hidden md:inline-flex px-6 py-2 rounded-lg border border-white/60 hover:border-white transition-colors duration-200 hover:bg-white/10'>Get a quote</button>
+      <button className='hidden md:inline-flex px-6 py-2 rounded-lg  border border-white/60 hover:border-white transition-colors duration-200 hover:bg-white/10'>Get a quote</button>
 
       {isOpen && (
         <div className='md:hidden w-full mt-4'>
