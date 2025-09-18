@@ -120,23 +120,6 @@ export default function Home() {
                   className="w-full h-auto object-contain"
                   priority
                 />
-                {/* Reflection */}
-                <div className="absolute left-0 right-0 top-full translate-y-3 overflow-hidden pointer-events-none">
-                  <Image
-                    src="/car4.png"
-                    alt="Luxury car reflection"
-                    width={2000}
-                    height={1000}
-                    className="w-full h-auto object-contain scale-y-[-1] opacity-60"
-                    style={{
-                      maskImage:
-                        "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0))",
-                      WebkitMaskImage:
-                        "linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0))",
-                    }}
-                    aria-hidden
-                  />
-                </div>
               </div>
             </div>
 
@@ -230,10 +213,10 @@ export default function Home() {
               </ul>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-white text-[18px] sm:text-[28px] mt-12 hover:text-white/70 transition"
+                className="inline-flex items-center  text-white text-[18px] sm:text-[28px] mt-12 hover:text-white/70 transition"
               >
                 Get a quote now{" "}
-                <span aria-hidden className="text-[34px] leading-none">
+                <span aria-hidden className="text-[28px] ml-2 leading-none">
                   ↗
                 </span>
               </Link>
@@ -241,53 +224,118 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative w-[1200px] h-[550px] rounded-xl overflow-hidden mt-12 ">
-          {/* Background Image */}
-          <Image
-            src="/car2.png" // put your image in /public and rename
-            alt="Luxury Car"
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/20"></div>
-
-          {/* Text Content */}
-          {/* <div className="relative z-10 flex items-center h-full ">
-            <div className="container mx-auto px-8 md:px-16 text-right">
-              <div className="w-3xl border text-center flex flex-col align-middle justify-start">
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white mb-6 border">
+        <section className="w-full flex justify-center mt-12  ">
+          <div className="relative w-[1400px]  ">
+            <Image
+              src="/car2.png"
+              alt="Luxury Car"
+              width={1400} // keep original image width
+              height={0} // auto height
+              className="w-full h-auto object-cover rounded-3xl"
+            />
+            <div className="absolute  inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 flex items-start justify-end ">
+              <div className="p-10 text-white z-10 space-y-1 ">
+                <h2 className="text-[24px]  sm:text-[58px] font-medium leading-tight text-white mb-2 ">
                   Book your luxury <br /> car detailing today
-                </h1>
-                <div className="text-gray-300 max-w-lg ml-auto mb-6  flex justify-center">
-                  
-                    Click the link below. Fill out the details and <br />
-                    we’ll get back to you in less than 24 hours.
-                  
-                </div>
-                <a
-                  href="#quote"
-                  className="inline-flex items-center text-lg font-medium text-white hover:underline"
-                >
+                </h2>
+                <p className="text-[#b6b6b6] text-[14px] sm:text-[20px] ">
+                  Click the link below. Fill out the details and <br />
+                  we’ll get back to you in less than 24 hours.
+                </p>
+                <button className="text-[18px] sm:text-[28px] font-medium text-white  hover:underline inset-ring-4 inset-ring-white p-2 rounded-2xl">
                   Get a quote now
-                  <span className="ml-2">↗</span>
-                </a>
+                  <span className="ml-2 text-[20px] sm:text-[30px]">↗</span>
+                </button>
               </div>
-            </div>
-          </div> */}
-
-          <div className="p-10 text-white relative z-10 space-y-10  flex">
-            <div className="w-2/3"></div>
-
-            <div>
-            <h2 className="text-8xl">Book your luxury <br /> car detailing today</h2>
-            <p>Click the link below. Fill out the details and <br />
-            we’ll get back to you in less than 24 hours.</p>
             </div>
           </div>
         </section>
+        {/* footer */}
+        <section className="mt-12 p-4 ">
+          <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12  ">
+            <div>
+              <h2 className="text-[26px] font-medium">LuxureDetails</h2>
+              <p className="text-[17px] text-[#b6b6b6] leading-relaxed">
+                {" "}
+                Experience the prestige of a professionally detailed car,
+                radiating elegance and refinement at every turn.
+              </p>
+            </div>
+        <div className="grid grid-cols-2   sm:grid-cols-3 gap-10 sm:gap-14  sm:place-items-start">
+              {/* website */}
+              <div className="space-y-2">
+                <h3 className="text-[24px] text-[#494444] font-medium">
+                  Website
+                </h3>
+                <ul className="space-y-3 text-[18px] font-light">
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Pricing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      About
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* contact */}
+              <div className="space-y-2">
+                <h3 className="text-[24px] text-[#494444] font-medium">
+                  Contact
+                </h3>
+                <ul className="space-y-4 text-[18px] font-mono">
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Get a qoute
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      contact form
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Email Us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* SocialMedia   */}
+              <div className="space-y-2">
+                <h3 className="text-[24px] text-[#494444] font-medium">
+                  SocialMedia
+                </h3>
+                <ul className="space-y-4 text-[18px] font-mono">
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Facebook
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Instagram
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/" className="hover:text-gray-300">
+                      Twitter
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* end */}
       </div>
     </main>
   );

@@ -22,3 +22,17 @@
 body {
   font-family: var(--font-clash-display), sans-serif;
 }
+
+/* Hide scrollbars globally while preserving scroll behavior */
+* {
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  width: 0; /* Chrome, Safari */
+  height: 0;
+}
+
+/* Prevent accidental horizontal overflow causing unwanted scrollbars */
+html, body {
+  overflow-x: hidden;
+}
