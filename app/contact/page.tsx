@@ -23,17 +23,17 @@ export default function ContactPage() {
       <div className="mt-12 grid gap-12 md:grid-cols-2">
         <div>
           <h2 className="font-headline text-2xl font-semibold">Contact Form</h2>
-          <form className="mt-6 space-y-4">
+          <form className="mt-6 space-y-5">
             <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name" className="block text-lg">Name</Label>
               <Input id="name"  className='bg-[#1e1e1e] text-white placeholder:!text-gray-400' placeholder="Your Name" />
             </div>
              <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email" className="block text-lg">Email</Label>
               <Input id="email"  className='bg-[#1e1e1e] text-white placeholder:!text-gray-400' type="email" placeholder="your.email@example.com" />
             </div>
              <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message" className="block text-lg">Message</Label>
               <Textarea id="message"  className='bg-[#1e1e1e] text-white placeholder:!text-gray-400' placeholder="How can we help you?" />
             </div>
             <button type="submit"  className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl">Send Message</button>
@@ -41,7 +41,7 @@ export default function ContactPage() {
         </div>
         <div className="space-y-8">
            <div>
-            <h2 className="font-headline text-2xl font-semibold">Our Information</h2>
+            <h2 className="font-headline text-2xl font-medium">Our Information</h2>
              <div className="mt-6 space-y-4 text-muted-foreground">
                <div className="flex items-center gap-4">
                  <Phone className="h-5 w-5 text-gray-300" />
@@ -49,7 +49,7 @@ export default function ContactPage() {
                </div>
                <div className="flex items-center gap-4">
                  <Mail className="h-5 w-5 text-gray-300" />
-                 <span className='text-gray-300'>contact@autolux.com</span>
+                 <span className='text-gray-300'>crystalclearautodetailing8.com</span>
                </div>
                <div className="flex items-center gap-4">
                  <MapPin className="h-5 w-5 text-gray-300" />
@@ -58,7 +58,7 @@ export default function ContactPage() {
              </div>
           </div>
           <div>
-            <h2 className="font-headline text-2xl font-semibold">Service Areas</h2>
+            <h2 className="font-headline text-2xl font-medium">Service Areas</h2>
              <div className="aspect-video w-full overflow-hidden rounded-lg border">
                  <iframe
                     width="100%"

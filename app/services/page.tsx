@@ -12,7 +12,7 @@ export default function ServicesPage() {
     <div className="container mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-24">
       <div className="text-center">
         <h1 className="font-headline text-4xl font-bold md:text-5xl">Our Detailing Services</h1>
-        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+        <p className="mx-auto mt-4 max-w-2xl text-gray-300">
           From a simple wash to a full ceramic coating, we offer a wide range of services to keep your car looking its best.
         </p>
       </div>

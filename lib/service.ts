@@ -6,7 +6,7 @@ export const services: Service[] = [
     name: 'Exterior Detailing',
     description: 'A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.',
     price: 120,
-    image: '/car1.png',
+    image: 'exterior-detailing',
   },
   {
     id: 'interior',
@@ -34,6 +34,13 @@ export const services: Service[] = [
     name: 'Ceramic Coating',
     description: 'A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.',
     price: 500,
+    image: 'ceramic-coating',
+  },
+  {
+    id: 'cerami-coating',
+    name: 'Ceramic Coating',
+    description: 'A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.',
+    price: 550,
     image: 'ceramic-coating',
   },
 ];
