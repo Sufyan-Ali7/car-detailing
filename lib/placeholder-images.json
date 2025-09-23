@@ -1,0 +1,47 @@
+{
+    "placeholderImages": [
+      {
+        "id": "home-hero",
+        "description": "A luxury black sports car parked in a modern garage, gleaming under soft light.",
+        "imageUrl": "https://picsum.photos/seed/1/1920/1080",
+        "imageHint": "luxury car"
+      },
+      {
+        "id": "about-team",
+        "description": "A professional car detailer carefully polishing the hood of a red luxury car.",
+        "imageUrl": "https://picsum.photos/seed/2/800/600",
+        "imageHint": "car detailing"
+      },
+      {
+        "id": "exterior-detailing",
+        "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
+        "imageUrl": "https://picsum.photos/seed/3/600/400",
+        "imageHint": "clean car"
+      },
+      {
+        "id": "interior-detailing",
+        "description": "Immaculate car interior showing a clean dashboard and leather seats.",
+        "imageUrl": "https://picsum.photos/seed/4/600/400",
+        "imageHint": "car interior"
+      },
+      {
+        "id": "full-detailing",
+        "description": "A silver sedan looking brand new after a full detailing service.",
+        "imageUrl": "https://picsum.photos/seed/5/600/400",
+        "imageHint": "sedan car"
+      },
+      {
+        "id": "paint-protection",
+        "description": "A close-up shot of water beading on a car's paint protected surface.",
+        "imageUrl": "https://picsum.photos/seed/6/600/400",
+        "imageHint": "car paint"
+      },
+      {
+        "id": "ceramic-coating",
+        "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
+        "imageUrl": "https://picsum.photos/seed/7/600/400",
+        "imageHint": "glossy car"
+      }
+    ]
+  }
+  

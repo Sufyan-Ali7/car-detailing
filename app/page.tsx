@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Card from "@/component/Card";
+import Card from "@/component/Card";  
 
 export default function Home() {
   return (
@@ -233,7 +233,8 @@ export default function Home() {
               height={0} // auto height
               className="w-full h-auto object-cover rounded-3xl"
             />
-            <div className="absolute  inset-0 bg-black/50"></div>
+            <div className="absolute w-[20%] left-0 top-0 h-full bg-gradient-to-r from-black to-transparent"></div>
+            <div className="absolute w-[20%] right-0 top-0 h-full bg-gradient-to-l from-black to-transparent"></div>
             <div className="absolute inset-0 flex items-start justify-end ">
               <div className="p-10 text-white z-10 space-y-1 ">
                 <h2 className="text-[24px]  sm:text-[58px] font-medium leading-tight text-white mb-2 ">
@@ -251,8 +252,45 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+  {/* Seattle Locations Banner */}
+  <section className="w-full py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+          <div className="max-w-[1400px] mx-auto text-center">
+            <h2 className="text-white text-[22px] sm:text-[28px] md:text-[32px] lg:text-[44px] font-medium uppercase leading-tight mb-8">
+              WHEREVER You Are in SEATTLE, CAR<br />
+              DETILING BRING THE SHINE
+            </h2>
+            
+            <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto justify-items-center">
+              {/* Column 1 */}
+              <div className="space-y-4 text-left">
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• West Seattle</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Capitol Hill</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Ballard</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Queen Anne</div>
+              </div>
+              
+              {/* Column 2 */}
+              <div className="space-y-4 text-left">
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• South Lake Union</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Beacon Hill</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Rainier Valley</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Burien</div>
+              </div>
+              
+              {/* Column 3 */}
+              <div className="space-y-4 text-left">
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Shoreline</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Tukwila</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• SeaTac</div>
+                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Renton</div>       
+            </div>
+          </div>
+          </div>
+        </section>
+
         {/* footer */}
-        <section className="mt-12 p-4 ">
+        <section className="mt-6  p-4 ">
           <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12  ">
             <div>
               <h2 className="text-[26px] font-medium">LuxureDetails</h2>
@@ -270,17 +308,17 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-3 text-[18px] font-light">
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Service
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Pricing
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       About
                     </Link>
                   </li>
@@ -293,17 +331,17 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-4 text-[18px] font-mono">
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Get a qoute
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       contact form
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300 ">
                       Email Us
                     </Link>
                   </li>
@@ -316,17 +354,17 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-4 text-[18px] font-mono">
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Facebook
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Instagram
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300">
+                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Twitter
                     </Link>
                   </li>
@@ -336,6 +374,7 @@ export default function Home() {
           </div>
         </section>
         {/* end */}
+      
       </div>
     </main>
   );

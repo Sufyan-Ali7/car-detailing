@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import {  clashDisplay} from "@/utils/fonts"
 import "./globals.css";
+import { CartProvider } from "@/context/cart-context";
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={clashDisplay.variable}>
+      <CartProvider>
            <body className={`${clashDisplay.className} bg-[#000000] text-white`}>
         <Navbar/>
         <div className="container mx-auto min-h-[87vh]">
@@ -39,6 +41,7 @@ export default function RootLayout({
         </div>
       <Footer/>
       </body>
+      </CartProvider>
     </html>
   );
 }
