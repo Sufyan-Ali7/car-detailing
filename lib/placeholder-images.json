@@ -3,38 +3,110 @@
       {
         "id": "exterior-detailing",
         "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
-        "imageUrl": "/car1.png",
-        "imageHint": "clean car"
+        "imageUrl": "/suv-exterior.png",
+        "imageHint": "clean car",
+        "tag":"SUV"
       },
+      
       {
         "id": "interior-detailing",
         "description": "Immaculate car interior showing a clean dashboard and leather seats.",
-        "imageUrl": "/car1.png",
-        "imageHint": "car interior"
+        "imageUrl": "/Suv-interior.png",
+        "imageHint": "car interior",
+          "tag":"SUV"
       },
       {
         "id": "full-detailing",
         "description": "A silver sedan looking brand new after a full detailing service.",
         "imageUrl": "/car1.png",
-        "imageHint": "sedan car"
+        "imageHint": "sedan car",
+          "tag":"SUV"
       },
+      {
+        "id": "exterior-detailing",
+        "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
+        "imageUrl": "/car1.png",
+        "imageHint": "clean car",
+        "tag":"Sedan"
+      },
+      {
+        "id": "interior-detailing",
+        "description": "Immaculate car interior showing a clean dashboard and leather seats.",
+        "imageUrl": "/car1.png",
+        "imageHint": "car interior",
+          "tag":"Sedan"
+      },
+      {
+        "id": "full-detailing",
+        "description": "A silver sedan looking brand new after a full detailing service.",
+        "imageUrl": "/car1.png",
+        "imageHint": "sedan car",
+          "tag":"Sedan"
+      },
+{
+  "id": "exterior-detailing",
+  "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
+  "imageUrl": "/car1.png",
+  "imageHint": "clean car",
+  "tag":"Truck"
+},
+{
+  "id": "interior-detailing",
+  "description": "Immaculate car interior showing a clean dashboard and leather seats.",
+  "imageUrl": "/car1.png",
+  "imageHint": "car interior",
+    "tag":"Truck"
+},
+{
+  "id": "full-detailing",
+  "description": "A silver sedan looking brand new after a full detailing service.",
+  "imageUrl": "/car1.png",
+  "imageHint": "sedan car",
+    "tag":"Truck"
+},
+{
+  "id": "exterior-detailing",
+  "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
+  "imageUrl": "/car1.png",
+  "imageHint": "clean car",
+  "tag":"Boat"
+},
+
+{
+  "id": "interior-detailing",
+  "description": "Immaculate car interior showing a clean dashboard and leather seats.",
+  "imageUrl": "/car1.png",
+  "imageHint": "car interior",
+    "tag":"Boat"
+},
+{
+  "id": "full-detailing",
+  "description": "A silver sedan looking brand new after a full detailing service.",
+  "imageUrl": "/car1.png",
+  "imageHint": "sedan car",
+    "tag":"Boat"
+},
+
       {
         "id": "paint-protection",
         "description": "A close-up shot of water beading on a car's paint protected surface.",
         "imageUrl": "/car1.png",
-        "imageHint": "car paint"
+        "imageHint": "car paint",
+          "tag":"SUV"
       },
       {
         "id": "ceramic-coating",
         "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
         "imageUrl": "/car1.png",
-        "imageHint": "glossy car"
+        "imageHint": "glossy car",
+          "tag":"SUV"
       },
       {
         "id": "cerami-coating",
         "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
         "imageUrl": "/car1.png",
-        "imageHint": "glossy car"
+        "imageHint": "glossy car",
+          "tag":"SUV"
       }
     ]
   }

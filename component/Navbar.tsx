@@ -29,7 +29,7 @@ const Navbar = () => {
       <ul className={`hidden md:flex gap-8 lg:gap-12 mt-4 md:mt-0`}>
         <Link href='/'><li className='text-[16px] hover:text-white/70 transition'>Home</li></Link>
         <Link href='/services'><li className='text-[16px] hover:text-white/70 transition'>Services</li></Link>
-        <Link href='/pricing'><li className='text-[16px] hover:text-white/70 transition'>Pricing</li></Link>
+        <Link href='/reviews'><li className='text-[16px] hover:text-white/70 transition'>Reviews</li></Link>
         <Link href='/about'><li className='text-[16px] hover:text-white/70 transition'>About</li></Link>
         <Link href='/contact'><li className='text-[16px] hover:text-white/70 transition'>Contact</li></Link>
       </ul>
@@ -53,7 +53,7 @@ const Navbar = () => {
           <ul className='flex flex-col gap-4 border-t border-white/10 pt-4'>
             <Link href='/' onClick={() => setIsOpen(false)}><li className='text-[16px]'>Home</li></Link>
             <Link href='/services' onClick={() => setIsOpen(false)}><li className='text-[16px]'>Services</li></Link>
-            <Link href='/pricing' onClick={() => setIsOpen(false)}><li className='text-[16px]'>Pricing</li></Link>
+            <Link href='/reviews' onClick={() => setIsOpen(false)}><li className='text-[16px]'>Reviews</li></Link>
             <Link href='/about' onClick={() => setIsOpen(false)}><li className='text-[16px]'>About</li></Link>
             <Link href='/contact' onClick={() => setIsOpen(false)}><li className='text-[16px]'>Contact</li></Link>
           </ul>
