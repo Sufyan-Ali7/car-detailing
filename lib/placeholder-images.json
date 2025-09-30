@@ -1,113 +1,147 @@
 {
     "placeholderImages": [
       {
-        "id": "exterior-detailing",
+        "id": "exterior-detailing-suv",
         "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
-        "imageUrl": "/suv-exterior.png",
+        "imageUrl": "/suv-exterior2.png",
         "imageHint": "clean car",
         "tag":"SUV"
       },
       
       {
-        "id": "interior-detailing",
+        "id": "interior-detailing-suv",
         "description": "Immaculate car interior showing a clean dashboard and leather seats.",
-        "imageUrl": "/Suv-interior.png",
+        "imageUrl": "/suv-interior2.png",
         "imageHint": "car interior",
           "tag":"SUV"
       },
       {
-        "id": "full-detailing",
+        "id": "full-detailing-suv",
         "description": "A silver sedan looking brand new after a full detailing service.",
-        "imageUrl": "/car1.png",
+        "imageUrl": "/suv-exterior.png",
         "imageHint": "sedan car",
           "tag":"SUV"
       },
       {
-        "id": "exterior-detailing",
+        "id": "paint-protection-suv",
+        "description": "A close-up shot of water beading on a car's paint protected surface.",
+        "imageUrl": "/suv-paint.png",
+        "imageHint": "car paint",
+          "tag":"SUV"
+      },
+      {
+        "id": "ceramic-coating-suv",
+        "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
+        "imageUrl": "/suv-seramic2.png",
+        "imageHint": "glossy car",
+          "tag":"SUV"
+      },
+      {
+        "id": "exterior-detailing-sedan",
         "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
-        "imageUrl": "/car1.png",
+        "imageUrl": "/sedan-exterior2.png",
         "imageHint": "clean car",
         "tag":"Sedan"
       },
       {
-        "id": "interior-detailing",
+        "id": "interior-detailing-sedan",
         "description": "Immaculate car interior showing a clean dashboard and leather seats.",
-        "imageUrl": "/car1.png",
+        "imageUrl": "/sedan-interior.png",
         "imageHint": "car interior",
           "tag":"Sedan"
       },
       {
-        "id": "full-detailing",
+        "id": "full-detailing-sedan",
         "description": "A silver sedan looking brand new after a full detailing service.",
-        "imageUrl": "/car1.png",
+        "imageUrl": "/sedan-exterior.png",
         "imageHint": "sedan car",
           "tag":"Sedan"
       },
+      {
+        "id": "paint-protection-sedan",
+        "description": "A close-up shot of water beading on a car's paint protected surface.",
+        "imageUrl": "/sedan-paint.png",
+        "imageHint": "car paint",
+          "tag":"Sedan"
+      },
+      {
+        "id": "ceramic-coating-sedan",
+        "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
+        "imageUrl": "/sedan-ceramic.png",
+        "imageHint": "glossy car",
+          "tag":"Sedan"
+      },
 {
-  "id": "exterior-detailing",
+  "id": "exterior-detailing-truck",
   "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
-  "imageUrl": "/car1.png",
+  "imageUrl": "/truck-exterior.png",
   "imageHint": "clean car",
   "tag":"Truck"
 },
 {
-  "id": "interior-detailing",
+  "id": "interior-detailing-truck",
   "description": "Immaculate car interior showing a clean dashboard and leather seats.",
-  "imageUrl": "/car1.png",
+  "imageUrl": "/truck-interior.png",
   "imageHint": "car interior",
     "tag":"Truck"
 },
 {
-  "id": "full-detailing",
+  "id": "full-detailing-truck",
   "description": "A silver sedan looking brand new after a full detailing service.",
-  "imageUrl": "/car1.png",
+  "imageUrl": "/truck-full.png",
   "imageHint": "sedan car",
     "tag":"Truck"
 },
+  {
+        "id": "paint-protection-truck",
+        "description": "A close-up shot of water beading on a car's paint protected surface.",
+        "imageUrl": "/truck-paint.png",
+        "imageHint": "car paint",
+          "tag":"Truck"
+      },
+      {
+        "id": "ceramic-coating-truck",
+        "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
+        "imageUrl": "/sedan-ceramic.png",
+        "imageHint": "glossy car",
+          "tag":"Truck"
+      },
 {
-  "id": "exterior-detailing",
+  "id": "exterior-detailing-boat",
   "description": "The side profile of a sparkling clean blue car, reflecting the sky.",
-  "imageUrl": "/car1.png",
+  "imageUrl": "/boat-exterior.png",
   "imageHint": "clean car",
   "tag":"Boat"
 },
 
 {
-  "id": "interior-detailing",
+  "id": "interior-detailing-boat",
   "description": "Immaculate car interior showing a clean dashboard and leather seats.",
-  "imageUrl": "/car1.png",
+  "imageUrl": "/boat-interior.png",
   "imageHint": "car interior",
     "tag":"Boat"
 },
 {
-  "id": "full-detailing",
+  "id": "full-detailing-boat",
   "description": "A silver sedan looking brand new after a full detailing service.",
-  "imageUrl": "/car1.png",
+  "imageUrl": "/boat-full.png",
   "imageHint": "sedan car",
     "tag":"Boat"
 },
-
-      {
-        "id": "paint-protection",
-        "description": "A close-up shot of water beading on a car's paint protected surface.",
-        "imageUrl": "/car1.png",
-        "imageHint": "car paint",
-          "tag":"SUV"
-      },
-      {
-        "id": "ceramic-coating",
-        "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
-        "imageUrl": "/car1.png",
-        "imageHint": "glossy car",
-          "tag":"SUV"
-      },
-      {
-        "id": "cerami-coating",
-        "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
-        "imageUrl": "/car1.png",
-        "imageHint": "glossy car",
-          "tag":"SUV"
-      }
+{
+  "id": "ceramic-coating-boat",
+  "description": "A car with a deep, glossy shine from a ceramic coating, parked outdoors.",
+  "imageUrl": "/boat-ceramic.png",
+  "imageHint": "glossy car",
+    "tag":"Boat"
+},
+{
+  "id": "paint-protection-boat",
+  "description": "A close-up shot of water beading on a car's paint protected surface.",
+  "imageUrl": "/boat-paint2.png",
+  "imageHint": "car paint",
+    "tag":"Boat"
+}
     ]
   }
   

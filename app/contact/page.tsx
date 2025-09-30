@@ -1,7 +1,5 @@
 import { Button } from '@/component/ui/button';
-import { Input } from '@/component/ui/input';
-import { Label } from '@/component/ui/label';
-import { Textarea } from '@/component/ui/textarea';
+import ContactForm from '../../component/contact-form';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -23,21 +21,7 @@ export default function ContactPage() {
       <div className="mt-12 grid gap-12 md:grid-cols-2">
         <div>
           <h2 className="font-headline text-2xl font-semibold">Contact Form</h2>
-          <form className="mt-6 space-y-5">
-            <div className="space-y-2">
-              <Label htmlFor="name" className="block text-lg">Name</Label>
-              <Input id="name"  className='bg-[#1e1e1e] text-white placeholder:!text-gray-400' placeholder="Your Name" />
-            </div>
-             <div className="space-y-2">
-              <Label htmlFor="email" className="block text-lg">Email</Label>
-              <Input id="email"  className='bg-[#1e1e1e] text-white placeholder:!text-gray-400' type="email" placeholder="your.email@example.com" />
-            </div>
-             <div className="space-y-2">
-              <Label htmlFor="message" className="block text-lg">Message</Label>
-              <Textarea id="message"  className='bg-[#1e1e1e] text-white placeholder:!text-gray-400' placeholder="How can we help you?" />
-            </div>
-            <button type="submit"  className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl">Send Message</button>
-          </form>
+          <ContactForm />
         </div>
         <div className="space-y-8">
            <div>

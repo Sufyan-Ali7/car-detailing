@@ -8,7 +8,7 @@ export const services: Service[] = [
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
     price: 140,
     tag: "SUV",
-    image: "exterior-detailing",
+    image: "exterior-detailing-suv",
     details: [
       "100% safe wash, foam bath",
       "Deep wheel cleaning & tire shine",
@@ -30,7 +30,7 @@ export const services: Service[] = [
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
     price: 170,
     tag: "SUV",
-    image: "interior-detailing",
+    image: "interior-detailing-suv",
     details: [
       "Deep cleaning of door seals",
       "Thorough vacuum",
@@ -48,7 +48,7 @@ export const services: Service[] = [
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
     price: 280,
     tag: "SUV",
-    image: "full-detailing",
+    image: "full-detailing-suv",
     details: [
       "100% safe wash, foam bath",
       "Deep wheel cleaning",
@@ -78,7 +78,7 @@ export const services: Service[] = [
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
     price: 550,
     tag: "SUV",
-    image: "ceramic-coating",
+    image: "ceramic-coating-suv",
   },
   {
     id: "paint-protection-suv",
@@ -87,7 +87,7 @@ export const services: Service[] = [
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
     price: 350,
     tag: "SUV",
-    image: "paint-protection",
+    image: "paint-protection-suv",
   },
   // Sedan services
   {
@@ -97,7 +97,7 @@ export const services: Service[] = [
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
     price: 120,
     tag: "Sedan",
-    image: "exterior-detailing",
+    image: "exterior-detailing-sedan",
     details: [
       "100% safe wash, foam bath",
       "Deep wheel cleaning & tire shine",
@@ -119,7 +119,7 @@ export const services: Service[] = [
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
     price: 150,
     tag: "Sedan",
-    image: "interior-detailing",
+    image: "interior-detailing-sedan",
     details: [
       "Deep cleaning of door seals",
       "Thorough vacuum",
@@ -137,7 +137,7 @@ export const services: Service[] = [
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
     price: 250,
     tag: "Sedan",
-    image: "full-detailing",
+    image: "full-detailing-sedan",
     details: [
       "100% safe wash, foam bath",
       "Deep wheel cleaning",
@@ -167,7 +167,7 @@ export const services: Service[] = [
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
     price: 550,
     tag: "Sedan",
-    image: "ceramic-coating",
+    image: "ceramic-coating-sedan",
   },
   {
     id: "paint-protection-sedan",
@@ -176,7 +176,7 @@ export const services: Service[] = [
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
     price: 350,
     tag: "Sedan",
-    image: "paint-protection",
+    image: "paint-protection-sedan",
   },
   // Truck Services
   {
@@ -186,7 +186,7 @@ export const services: Service[] = [
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
     price: 200,
     tag: "Truck",
-    image: "exterior-detailing",
+    image: "exterior-detailing-truck",
     details: [
       "100% safe wash, foam bath",
       "Deep wheel cleaning & tire shine",
@@ -208,7 +208,7 @@ export const services: Service[] = [
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
     price: 160,
     tag: "Truck",
-    image: "interior-detailing",
+    image: "interior-detailing-truck",
     details: [
       "Deep cleaning of door seals",
       "Thorough vacuum",
@@ -226,7 +226,7 @@ export const services: Service[] = [
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
     price: 320,
     tag: "Truck",
-    image: "full-detailing",
+    image: "full-detailing-truck",
     details: [
       "100% safe wash, foam bath",
       "Deep wheel cleaning",
@@ -256,7 +256,7 @@ export const services: Service[] = [
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
     price: 550,
     tag: "Truck",
-    image: "ceramic-coating",
+    image: "ceramic-coating-truck",
   },
   {
     id: "paint-protection-truck",
@@ -265,7 +265,7 @@ export const services: Service[] = [
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
     price: 350,
     tag: "Truck",
-    image: "paint-protection",
+    image: "paint-protection-truck",
   },
   // Boat services
   {
@@ -273,9 +273,9 @@ export const services: Service[] = [
     name: "Exterior Detailing",
     description:
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
-     price: "5-10 per foot", 
+    price: "5-10 per foot",
     tag: "Boat",
-    image: "exterior-detailing",
+    image: "exterior-detailing-boat",
     details: [
       "Rinse & foam wash",
       "Hand scrub with marine-safe soap",
@@ -299,13 +299,13 @@ export const services: Service[] = [
     name: "Interior Detailing",
     description:
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
-    price:"6-10 per foot" ,
+    price: "6-10 per foot",
     tag: "Boat",
-    image: "interior-detailing",
+    image: "interior-detailing-boat",
     details: [
       "Small boats / runabouts: $50 – $150 flat",
-"Mid-size cruisers: $150 – $300 flat",
-"Large yachts: $300 – $500+",
+      "Mid-size cruisers: $150 – $300 flat",
+      "Large yachts: $300 – $500+",
       "Deep cleaning of door seals",
       "Thorough vacuum",
       "Steam cleaning of all plastics",
@@ -322,11 +322,11 @@ export const services: Service[] = [
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
     price: "25 – $60 per foot",
     tag: "Boat",
-    image: "full-detailing",
+    image: "full-detailing-boat",
     details: [
       "Full wash, wax, polish",
-"Interior deep cleaning",
-"Windows, metal, & upholstery care",
+      "Interior deep cleaning",
+      "Windows, metal, & upholstery care",
       "100% safe wash, foam bath",
       "Deep wheel cleaning",
       "Tire shine",
@@ -349,13 +349,13 @@ export const services: Service[] = [
     ],
   },
   {
-    id: "cerami-coating-boat",
+    id: "ceramic-coating-boat",
     name: "Ceramic Coating",
     description:
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
     price: 550,
     tag: "Boat",
-    image: "ceramic-coating",
+    image: "ceramic-coating-boat",
   },
   {
     id: "paint-protection-boat",
@@ -364,7 +364,7 @@ export const services: Service[] = [
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
     price: 350,
     tag: "Boat",
-    image: "paint-protection",
+    image: "paint-protection-boat",
   },
   // other services
 ];
