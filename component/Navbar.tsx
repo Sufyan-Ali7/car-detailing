@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { ShoppingCart } from 'lucide-react';
+import { Car, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/context/cart-context';
 
 const Navbar = () => {
@@ -18,10 +18,10 @@ const Navbar = () => {
           className='md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-white/30 hover:border-white/60 transition'
           onClick={() => setIsOpen((v) => !v)}
         >
-          <span aria-hidden className='block w-5 h-[2px] bg-white relative'>
+           <span aria-hidden className='block w-5 h-[2px] bg-white relative'>
             <span className={`absolute left-0 top-[-6px] w-5 h-[2px] bg-white transition-transform ${isOpen ? 'rotate-45 translate-y-[6px]' : ''}`}></span>
             <span className={`absolute left-0 top-[6px] w-5 h-[2px] bg-white transition-transform ${isOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}></span>
-          </span>
+          </span> 
         </button>
       </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
       {/* Desktop Get a Quote button */}
       <Link href="/booking" className="relative hidden md:inline-block">
         <button className='px-6 py-2 rounded-lg border border-white/60 hover:border-white transition-colors duration-200 hover:bg-white/10 flex items-center gap-2'>
-          <ShoppingCart className="h-5 w-5" />
+          <Car className="h-5 w-5" />
           Get a quote
           {cartCount > 0 && (
             <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-sm text-white">
@@ -61,7 +61,7 @@ const Navbar = () => {
           {/* Mobile Get a Quote button */}
           <Link href="/booking" className="relative w-full">
             <button className='mt-4 w-full px-6 py-2 rounded-lg border border-white/60 hover:border-white transition-colors duration-200 hover:bg-white/10 flex items-center justify-center gap-2'>
-              <ShoppingCart className="h-5 w-5" />
+              <Car className="h-5 w-5" />
               Get a quote
               {cartCount > 0 && (
                 <span className="absolute right-2  flex h-6 w-6 items-center justify-center rounded-full bg-red-600 text-md text-white">
