@@ -1,6 +1,6 @@
-import { ServiceCard } from '@/component/service-card';
+// import { ServiceCard } from '@/component/service-card';
 import { Testimonials } from '@/component/testimonials';
-import { services } from '@/lib/service';
+// import { services } from '@/lib/service';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

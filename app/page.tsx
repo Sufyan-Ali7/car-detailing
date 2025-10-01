@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Card from "@/component/Card";  
+import { CheckCircle, Crown, Diamond } from "lucide-react";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
             href="/contact"
             className="mt-4 inline-flex items-center gap-2 px-5 py-2.5 text-xl sm:text-2xl font-medium text-white hover:text-white/60 transition"
           >
-            {"Let's connect"}{" "}
+            {"Let\u2019s connect"}{" "}
             <span aria-hidden className="text-4xl leading-none">
               ↗
             </span>
@@ -77,7 +78,7 @@ export default function Home() {
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-[#7a7575] max-w-[65ch]">
                 Immerse yourself in luxury with our bespoke detailing packages
-                tailored to your car's unique needs. From meticulous paint
+                tailored to your car&apos;s unique needs. From meticulous paint
                 correction to deep interior treatments, we elevate every surface
                 to a showroom finish.
               </p>
@@ -86,17 +87,17 @@ export default function Home() {
               <Card
                 imageURL="/car3.png"
                 heading="Entry leavel detail"
-                text=" Treat your luxury car to a thorough hand wash and wax application."
+                text=" Our entry-level detail gives your car a refreshing hand wash with pH-balanced soap, leaving the exterior spotless and protected. We apply a high-quality wax to restore shine and add a layer of protection to your paint. Wheels, tires, and glass are cleaned to ensure a polished, well-maintained look inside and out."
               />
               <Card
                 imageURL="/car1.png"
                 heading="Maintance detail"
-                text="Ensure your car's longevity with a periodic exterior protection treatment "
+                text="Ensure your car&apos;s longevity with a periodic exterior protection treatment that preserves both shine and paint quality. This service includes a gentle hand wash, premium wax application, and thorough wheel and glass cleaning. It&apos;s the perfect choice for keeping your vehicle looking sharp between full detailing sessions."
               />
               <Card
                 imageURL="/car5.png"
                 heading="full detail"
-                text="Pamper your vichle with a complete treatment,leaving no detail overlooked."
+                text="Pamper your vehicle with a complete treatment that leaves no detail overlooked. This service combines deep exterior cleaning, wax protection, and full interior care including vacuuming, upholstery cleaning, and surface conditioning. It&apos;s the ultimate package to restore your car&apos;s showroom look inside and out.."
               />
             </div>
           </div>
@@ -135,19 +136,7 @@ export default function Home() {
                 <li>
                   <div className="flex items-start gap-4">
                     {/* Icon */}
-                    <svg
-                      className="w-6 h-6 text-white mt-1"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path
-                        d="M12 3v3m0 12v3m9-9h-3M6 12H3m13.95-6.95-2.12 2.12M8.17 15.83l-2.12 2.12m12.07 0-2.12-2.12M8.17 8.17 6.05 6.05"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <CheckCircle className="w-6 h-6 text-white mt-1" />
                     <div>
                       <h3 className="text-white text-[24px] sm:text-[26px] font-medium">
                         Precise work
@@ -162,25 +151,13 @@ export default function Home() {
                 </li>
                 <li>
                   <div className="flex items-start gap-4">
-                    <svg
-                      className="w-6 h-6 text-white mt-1"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path
-                        d="M3 7h18M5 7l2 12h10l2-12M9 7V5a3 3 0 0 1 6 0v2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                  <Crown className="w-6 h-6 text-white mt-1" />
                     <div>
                       <h3 className="text-white text-[24px] sm:text-[26px] font-medium">
                         Premium Products and Services
                       </h3>
                       <p className="text-[#b6b6b6] text-[16px] sm:text-[18px] max-w-[60ch]">
-                        Ensure your car's longevity with a periodic exterior
+                        Ensure your car&apos;s longevity with a periodic exterior
                         protection treatment.
                       </p>
                     </div>
@@ -189,16 +166,7 @@ export default function Home() {
                 </li>
                 <li>
                   <div className="flex items-start gap-4">
-                    <svg
-                      className="w-6 h-6 text-white mt-1"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path d="M12 21c4.97-3.5 8-7.03 8-11a8 8 0 1 0-16 0c0 3.97 3.03 7.5 8 11Z" />
-                      <circle cx="12" cy="11" r="3" fill="currentColor" />
-                    </svg>
+                  <Diamond className="w-6 h-6 text-white mt-1" />
                     <div>
                       <h3 className="text-white text-[24px] sm:text-[26px] font-medium">
                         High‑Level Security and Privacy
@@ -242,19 +210,19 @@ export default function Home() {
                 </h2>
                 <p className="text-[#b6b6b6] text-[14px] sm:text-[20px] ">
                   Click the link below. Fill out the details and <br />
-                  we’ll get back to you in less than 24 hours.
+                  we&apos;ll get back to you in less than 24 hours.
                 </p>
-                <button className="text-[18px] sm:text-[28px] font-medium text-white  hover:underline inset-ring-4 inset-ring-white p-2 rounded-2xl">
+              <Link href="/contact">  <button className="text-[18px] sm:text-[28px] font-medium text-white  hover:underline inset-ring-4 inset-ring-white p-2 rounded-2xl">
                   Get a quote now
                   <span className="ml-2 text-[20px] sm:text-[30px]">↗</span>
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
         </section>
 
   {/* Seattle Locations Banner */}
-  <section className="w-full py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+  {/* <section className="w-full py-16 px-4 sm:px-8 md:px-12 lg:px-20">
           <div className="max-w-[1400px] mx-auto text-center">
             <h2 className="text-white text-[22px] sm:text-[28px] md:text-[32px] lg:text-[44px] font-medium uppercase leading-tight mb-8">
               WHEREVER You Are in SEATTLE, CAR<br />
@@ -263,31 +231,31 @@ export default function Home() {
             
             <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto justify-items-center">
               {/* Column 1 */}
-              <div className="space-y-4 text-left">
+              {/* <div className="space-y-4 text-left">
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• West Seattle</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Capitol Hill</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Ballard</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Queen Anne</div>
-              </div>
+              </div> */}
               
               {/* Column 2 */}
-              <div className="space-y-4 text-left">
+              {/* <div className="space-y-4 text-left">
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• South Lake Union</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Beacon Hill</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Rainier Valley</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Burien</div>
-              </div>
+              </div> */}
               
               {/* Column 3 */}
-              <div className="space-y-4 text-left">
+              {/* <div className="space-y-4 text-left">
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Shoreline</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Tukwila</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• SeaTac</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Renton</div>       
             </div>
           </div>
-          </div>
-        </section>
+          </div> */}
+        {/* </section> */} 
 
         {/* footer */}
         <section className="mt-6  p-4 ">
@@ -313,10 +281,15 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/reviews" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
+                      Reviews
+                    </Link>
+                  </li>
+                  {/* <li>
                     <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Pricing
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       About
@@ -329,19 +302,19 @@ export default function Home() {
                 <h3 className="text-[24px] text-[#494444] font-medium">
                   Contact
                 </h3>
-                <ul className="space-y-4 text-[18px] font-mono">
+                <ul className="space-y-4 text-[18px] font-light">
                   <li>
-                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
+                    <Link href="/booking" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Get a qoute
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
+                    <Link href="/contact" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       contact form
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300 ">
+                    <Link  href="mailto:crystalclearautodetailing8@gmail.com" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300 ">
                       Email Us
                     </Link>
                   </li>
@@ -352,22 +325,22 @@ export default function Home() {
                 <h3 className="text-[24px] text-[#494444] font-medium">
                   SocialMedia
                 </h3>
-                <ul className="space-y-4 text-[18px] font-mono">
+                <ul className="space-y-4 text-[18px] font-light">
                   <li>
-                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
+                    <Link href="https://www.facebook.com/profile.php?id=61577754802554" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Facebook
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
+                    <Link href="https://www.instagram.com/crystalclearautodetailing8/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Instagram
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Twitter
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

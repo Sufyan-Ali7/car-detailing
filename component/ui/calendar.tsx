@@ -1,9 +1,8 @@
 import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { DayPicker } from "react-day-picker"
-
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/component/ui/button" // ✅ fixed path (components, not component)
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>
 
@@ -52,8 +51,17 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
+        // ✅ correct way in v9+
+        Nav: ({ onPreviousClick, onNextClick }) => (
+          <div className="flex justify-between w-full">
+            <button type="button" onClick={onPreviousClick} className="p-1">
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button type="button" onClick={onNextClick} className="p-1">
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        ),
       }}
       {...props}
     />

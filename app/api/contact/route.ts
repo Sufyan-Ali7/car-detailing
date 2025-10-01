@@ -8,7 +8,18 @@ export async function POST(req: Request) {
     const data = await req.json();
     const contact = await Contact.create(data);
     return NextResponse.json({ success: true, contact });
-  } catch (error: any) {
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return NextResponse.json(
+        { success: false, error: error.message },
+        { status: 500 }
+      );
+    }
+  
+    return NextResponse.json(
+      { success: false, error: "An unknown error occurred" },
+      { status: 500 }
+    );
   }
+  
 }

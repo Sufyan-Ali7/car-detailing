@@ -41,45 +41,67 @@ export function BookingForm() {
   const [zipCode, setZipCode] = useState("");
   const [isChecking, setIsChecking] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
   const lastCheckedZipRef = useRef<string | null>(null);
+
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [carModel, setCarModel] = useState("");
 
+  // ✅ Booking Submit
   async function handleBookingSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSubmitting(true);
+    setSuccess(null);
+    setError(null);
 
-    const res = await fetch("/api/booking", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        phone,
-        zipCode,
-        address,
-        carModel,
-        services: cartItems.map((i) => i.name),
-        total: cartTotal,
-      }),
-    });
+    try {
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          phone,
+          zipCode,
+          address,
+          carModel,
+          services: cartItems.map((i) => i.name),
+          total: cartTotal,
+        }),
+      });
 
-    const data = await res.json();
-    if (data.success) {
-      alert("Booking saved to MongoDB!");
+      const data = await res.json();
+
+      if (!res.ok || !data?.success) {
+        throw new Error(data?.error || "Failed to book service");
+      }
+
+      // ✅ Success
+      setSuccess("Booking submitted successfully 🎉");
+      clearCart();
+      setIsSubmitted(true);
+
+      // Reset form fields
+      setPhone("");
+      setZipCode("");
+      setAddress("");
+      setCarModel("");
+    } catch (err: any) {
+      setError(err?.message || "Something went wrong");
+    } finally {
+      setSubmitting(false);
     }
-    setIsSubmitted(true);
-
-    clearCart();
   }
 
-  // Debounced availability check when zipCode becomes valid (5 digits)
+  // ✅ Availability check (zip code)
   useEffect(() => {
-    // Only digits, exactly 5
     if (!/^\d{5}$/.test(zipCode) || cartItems.length === 0) {
       setAvailability(null);
       return;
     }
 
-    // Avoid duplicate checks for same zip
     if (lastCheckedZipRef.current === zipCode) return;
 
     setIsChecking(true);
@@ -97,14 +119,8 @@ export function BookingForm() {
     return () => clearTimeout(timeoutId);
   }, [zipCode, cartItems, startTransition]);
 
-  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   setIsSubmitted(true);
-  //   handleBookingSubmit()
-  //   clearCart();
-  // };
-
-  if (isSubmitted) {
+  // ✅ If booking is submitted successfully → show success card
+  if (isSubmitted && success) {
     return (
       <Card>
         <CardHeader className="text-center">
@@ -112,10 +128,7 @@ export function BookingForm() {
           <CardTitle className="mt-4 text-2xl font-headline">
             Booking Confirmed!
           </CardTitle>
-          <CardDescription>
-            Thank you for booking with AutoLux. Our team will contact you
-            shortly to confirm your appointment details.
-          </CardDescription>
+          <CardDescription>{success}</CardDescription>
         </CardHeader>
         <CardContent className="text-center">
           <Button asChild>
@@ -126,6 +139,7 @@ export function BookingForm() {
     );
   }
 
+  // ✅ If cart empty
   if (cartItems.length === 0) {
     return (
       <Card>
@@ -148,6 +162,7 @@ export function BookingForm() {
   return (
     <form onSubmit={handleBookingSubmit}>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 ">
+        {/* Left Side: Customer Info */}
         <Card>
           <CardHeader>
             <CardTitle className="font-headline">Your Information</CardTitle>
@@ -156,6 +171,7 @@ export function BookingForm() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
+            {/* Phone */}
             <div className="space-y-2">
               <Label htmlFor="phone">Phone Number</Label>
               <Input
@@ -168,6 +184,8 @@ export function BookingForm() {
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
+
+            {/* Zip Code */}
             <div className="space-y-2">
               <Label htmlFor="zip">Zip Code</Label>
               <Input
@@ -217,6 +235,8 @@ export function BookingForm() {
                 </p>
               )}
             </div>
+
+            {/* Address */}
             <div className="space-y-2 ">
               <Label htmlFor="address">Complete Address</Label>
               <Input
@@ -228,6 +248,8 @@ export function BookingForm() {
                 onChange={(e) => setAddress(e.target.value)}
               />
             </div>
+
+            {/* Car Model */}
             <div className="space-y-2">
               <Label htmlFor="car-model">Car Model</Label>
               <Input
@@ -242,6 +264,7 @@ export function BookingForm() {
           </CardContent>
         </Card>
 
+        {/* Right Side: Cart Summary */}
         <Card className="bg-[#000000] ">
           <CardHeader>
             <CardTitle className="font-headline text-white">
@@ -267,6 +290,7 @@ export function BookingForm() {
                     </p>
                   </div>
                   <button
+                    type="button"
                     onClick={() => removeFromCart(item.id)}
                     aria-label={`Remove ${item.name}`}
                   >
@@ -284,15 +308,19 @@ export function BookingForm() {
           <CardFooter>
             <button
               type="submit"
-              className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl"
-              disabled={isPending || !availability?.isAvailable}
+              className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl "
+              disabled={submitting || !availability?.isAvailable}
             >
-              {isPending ? (
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              ) : null}
-              Book Now (Pay After Service)
+              {submitting && <Loader2 className="mr-2 mt-4 h-4 w-4 animate-spin" />}
+              {submitting ? "Submitting..." : "Book Now (Pay After Service)"}
             </button>
           </CardFooter>
+
+          {/* ✅ show feedback */}
+          {success && (
+            <p className="text-center text-green-500 mt-2">{success}</p>
+          )}
+          {error && <p className="text-center text-red-500 mt-2">{error}</p>}
         </Card>
       </div>
     </form>

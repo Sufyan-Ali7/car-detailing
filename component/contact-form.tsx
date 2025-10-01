@@ -19,7 +19,7 @@ export default function ContactForm() {
     setSuccess(null);
     setError(null);
     try {
-      const res = await fetch("/api/booking/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),

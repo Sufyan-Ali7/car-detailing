@@ -73,20 +73,7 @@ const SidebarTrigger = React.forwardRef<
 ))
 SidebarTrigger.displayName = "SidebarTrigger"
 
-const SidebarRail = React.forwardRef<
-  HTMLButtonElement,
-  React.ButtonHTMLAttributes<HTMLButtonElement>
->(({ className, ...props }, ref) => (
-  <button
-    ref={ref}
-    className={cn(
-      "group/sidebar-rail flex w-5 -translate-x-1/2 flex-col items-center gap-y-1 rounded-full border bg-sidebar p-0.5 text-sidebar-foreground no-underline outline-none ring-sidebar-ring transition-all hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:translate-x-0 group-hover/sidebar-wrapper:translate-x-0",
-      className
-    )}
-    {...props}
-  />
-))
-SidebarRail.displayName = "SidebarRail"
+
 
 const SidebarContent = React.forwardRef<
   HTMLDivElement,
@@ -112,17 +99,6 @@ const SidebarHeader = React.forwardRef<
 ))
 SidebarHeader.displayName = "SidebarHeader"
 
-const SidebarFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex flex-col gap-2 p-2", className)}
-    {...props}
-  />
-))
-SidebarFooter.displayName = "SidebarFooter"
 
 const SidebarGroup = React.forwardRef<
   HTMLDivElement,

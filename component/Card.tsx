@@ -28,10 +28,10 @@ const  Card: React.FC<CardProps> = ({ imageURL, heading, text }) => {
         {text}
       </p>
 
-      <Link href="#" className='inline-flex items-center gap-2 text-white hover:text-white/60 mt-3 sm:mt-4'>
+      {/* <Link href="#" className='inline-flex items-center gap-2 text-white hover:text-white/60 mt-3 sm:mt-4'>
         <span>Learn more</span>
         <span aria-hidden className="text-2xl leading-none">→</span>
-      </Link>
+      </Link> */}
     </div>
   )
 }

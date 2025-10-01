@@ -1,4 +1,4 @@
-import { Button } from '@/component/ui/button';
+// import { Button } from '@/component/ui/button';
 import ContactForm from '../../component/contact-form';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -14,7 +14,7 @@ export default function ContactPage() {
        <div className="text-center">
         <h1 className="font-headline text-4xl font-medium md:text-5xl">Get In Touch</h1>
         <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-          Have questions or need a custom quote? We're here to help.
+          Have questions or need a custom quote? We&apos;re here to help.
         </p>
       </div>
 

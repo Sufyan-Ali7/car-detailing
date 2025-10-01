@@ -21,7 +21,7 @@ export default function AboutPage() {
           <div className="mt-6 border-l-4 border-gray-300 pl-4">
             <h2 className="font-headline text-2xl font-semibold">Our Mission</h2>
             <blockquote className="mt-2 text-xl italic">
-              "Professional car detailing anywhere in the USA with guaranteed satisfaction."
+              &quot;Professional car detailing anywhere in the USA with guaranteed satisfaction.&quot;
             </blockquote>
           </div>
           <p className="mt-6 text-gray-300">

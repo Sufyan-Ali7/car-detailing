@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={clashDisplay.variable}>
+    <html lang="en" className={`${clashDisplay.variable} ${geistSans.variable} ${geistMono.variable}`}>
       <CartProvider>
            <body className={`${clashDisplay.className} bg-[#000000] text-white`}>
         <Navbar/>
