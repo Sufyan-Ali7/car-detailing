@@ -2,16 +2,15 @@
 
 import { createContext, useContext, useState, ReactNode } from 'react';
 import type { Service } from '@/types';
-import { useToast } from '@/hooks/use-toast';
 
-interface CartItem extends Service {
+export interface CartItem extends Service {
   quantity: number;
 }
 
 interface CartContextType {
   cartItems: CartItem[];
-  addToCart: (service: Service) => void;
-  removeFromCart: (serviceId: string) => void;
+  addToCart: (service: Service) => boolean; // true if added, false if already existed
+  removeFromCart: (serviceId: string) => boolean; // true if removed
   clearCart: () => void;
   cartTotal: number;
   cartCount: number;
@@ -21,44 +20,36 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const { toast } = useToast();
 
-  const addToCart = (service: Service) => {
-    setCartItems(prevItems => {
-      const existingItem = prevItems.find(item => item.id === service.id);
-      if (existingItem) {
-        toast({
-          title: 'Service already in cart',
-          description: `${service.name} is already in your booking request.`,
-        });
-        return prevItems;
-      }
-      toast({
-        title: 'Service Added',
-        description: `${service.name} has been added to your booking request.`,
-      });
-      return [...prevItems, { ...service, quantity: 1 }];
+  const addToCart = (service: Service): boolean => {
+    let wasAdded = false;
+
+    setCartItems(prev => {
+      const exists = prev.some(item => item.id === service.id);
+      if (exists) return prev;
+      wasAdded = true;
+      return [...prev, { ...service, quantity: 1 }];
     });
+
+    return wasAdded;
   };
 
-  const removeFromCart = (serviceId: string) => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== serviceId));
-    toast({
-      title: 'Service Removed',
-      description: 'The service has been removed from your booking request.',
-      variant: 'destructive',
+  const removeFromCart = (serviceId: string): boolean => {
+    let wasRemoved = false;
+    setCartItems(prev => {
+      if (prev.some(i => i.id === serviceId)) wasRemoved = true;
+      return prev.filter(i => i.id !== serviceId);
     });
+    return wasRemoved;
   };
 
-  const clearCart = () => {
-    setCartItems([]);
-  };
-  
-  const cartTotal = cartItems.reduce((total, item) => {
-    const unitPrice = Number(item.price) || 0;
-    return total + unitPrice * item.quantity;
+  const clearCart = () => setCartItems([]);
+
+  const cartTotal = cartItems.reduce((sum, item) => {
+    const price = Number(item.price) || 0;
+    return sum + price * item.quantity;
   }, 0);
-  
+
   const cartCount = cartItems.length;
 
   return (
@@ -67,11 +58,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     </CartContext.Provider>
   );
 };
-  
+
 export const useCart = () => {
-  const context = useContext(CartContext);
-  if (context === undefined) {
-    throw new Error('useCart must be used within a CartProvider');
-  }
-  return context;
+  const ctx = useContext(CartContext);
+  if (!ctx) throw new Error('useCart must be used within a CartProvider');
+  return ctx;
 };

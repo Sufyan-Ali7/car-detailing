@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import {  clashDisplay} from "@/utils/fonts"
 import "./globals.css";
 import { CartProvider } from "@/context/cart-context";
+import { Toaster } from "@/component/ui/toaster"
 import Footer from "@/component/Footer";
 import Navbar from "@/component/Navbar";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <div className="container mx-auto min-h-[87vh]">
         {children}
         </div>
+        <Toaster/>
       <Footer/>
       </body>
       </CartProvider>

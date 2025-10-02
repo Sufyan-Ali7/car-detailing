@@ -24,12 +24,59 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { checkAvailability } from "@/app/booking/actions";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/component/ui/dialog";
 
 interface AvailabilityResult {
   isAvailable?: boolean;
   message?: string;
   alternative?: string;
   error?: string;
+}
+
+// ✅ Delete Confirmation Dialog Component
+function DeleteConfirmDialog({
+  serviceName,
+  onConfirm,
+  trigger,
+}: {
+  serviceName: string;
+  onConfirm: () => void;
+  trigger: React.ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+
+  const handleConfirm = () => {
+    onConfirm();
+    setOpen(false);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <div onClick={() => setOpen(true)}>{trigger}</div>
+      <DialogContent className="bg-black text-white rounded-xl p-6  lg:w-[800px] md:w-[500px] sm:w-[600px] w-[250px]">
+        <DialogHeader>
+          <DialogTitle>Remove service?</DialogTitle>
+        </DialogHeader>
+        <p className="text-gray-300 mt-2">
+          Are you sure you want to remove <strong>{serviceName}</strong> from
+          your booking?
+        </p>
+        <div className="mt-6 flex justify-end gap-3">
+          <Button variant="secondary" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+          <Button variant="destructive" onClick={handleConfirm}>
+            Remove
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
 }
 
 export function BookingForm() {
@@ -198,7 +245,9 @@ export function BookingForm() {
                 maxLength={5}
                 value={zipCode}
                 onChange={(e) => {
-                  const digitsOnly = e.target.value.replace(/\D/g, "").slice(0, 5);
+                  const digitsOnly = e.target.value
+                    .replace(/\D/g, "")
+                    .slice(0, 5);
                   setZipCode(digitsOnly);
                   if (digitsOnly.length < 5) {
                     setAvailability(null);
@@ -289,13 +338,20 @@ export function BookingForm() {
                         : item.price ?? "Price not available"}
                     </p>
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => removeFromCart(item.id)}
-                    aria-label={`Remove ${item.name}`}
-                  >
-                    <Trash2 className="h-5 w-6 text-red-600 hover:text-red-800" />
-                  </button>
+
+                  {/* ✅ Confirmation popup for delete */}
+                  <DeleteConfirmDialog
+                    serviceName={item.name}
+                    onConfirm={() => removeFromCart(item.id)}
+                    trigger={
+                      <button
+                        type="button"
+                        aria-label={`Remove ${item.name}`}
+                      >
+                        <Trash2 className="h-5 w-6 text-red-600 hover:text-red-800" />
+                      </button>
+                    }
+                  />
                 </div>
               ))}
               <Separator />
@@ -311,7 +367,9 @@ export function BookingForm() {
               className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl "
               disabled={submitting || !availability?.isAvailable}
             >
-              {submitting && <Loader2 className="mr-2 mt-4 h-4 w-4 animate-spin" />}
+              {submitting && (
+                <Loader2 className="mr-2 mt-4 h-4 w-4 animate-spin" />
+              )}
               {submitting ? "Submitting..." : "Book Now (Pay After Service)"}
             </button>
           </CardFooter>
