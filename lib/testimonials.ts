@@ -1,6 +1,6 @@
 export const testimonials = [
     {
-      quote: 'LuxureDetails transformed my car! The interior looks brand new, and the shine on the exterior is incredible. Highly recommend!',
+      quote: 'CrystalDetails transformed my car! The interior looks brand new, and the shine on the exterior is incredible. Highly recommend!',
       name: 'Emily R.',
       city: 'Seattle, WA',
       avatarUrl: 'https://picsum.photos/seed/101/48/48',
@@ -14,7 +14,7 @@ export const testimonials = [
       rating: 4,
     },
     {
-      quote: 'Quick, professional, and extremely detailed. My SUV has never looked better. I\'ll definitely use LuxureDetails again!',
+      quote: 'Quick, professional, and extremely detailed. My SUV has never looked better. I\'ll definitely CrystalDetails again!',
       name: 'Sarah K.',
       city: 'Los Angeles, CA',
       avatarUrl: 'https://picsum.photos/seed/103/48/48',
@@ -56,7 +56,7 @@ export const testimonials = [
       rating: 5,
     },
     {
-      quote: 'I was hesitant about mobile detailing, but LuxureDetails exceeded all my expectations. Flawless work.',
+      quote: 'I was hesitant about mobile detailing, but CrystalDetails exceeded all my expectations. Flawless work.',
       name: 'Brian G.',
       city: 'Phoenix, AZ',
       avatarUrl: 'https://picsum.photos/seed/109/48/48',
@@ -119,7 +119,7 @@ export const testimonials = [
       rating: 5,
     },
     {
-      quote: 'I highly recommend LuxureDetails to anyone who loves their car. You won\'t find a better detailing service.',
+      quote: 'I highly recommend CrystalDetails to anyone who loves their car. You won\'t find a better detailing service.',
       name: 'Mia G.',
       city: 'Portland, OR',
       avatarUrl: 'https://picsum.photos/seed/118/48/48',

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Us - AutoLux',
+  title: 'About Us - CrystalDetails',
   description: 'Learn more about Crystal Clear Auto Detailing and our mission.',
 };
 

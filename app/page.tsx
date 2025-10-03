@@ -2,6 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import Card from "@/component/Card";  
 import { CheckCircle, Crown, Diamond } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Crystal Clear Auto Detailing - Premium Car Detailing Services",
+  description:
+    "Professional auto detailing services for luxury and everyday cars. From hand washes to full detailing, Crystal Clear Auto Detailing keeps your car shining like new.",
+};
+
 
 export default function Home() {
   return (
@@ -12,7 +20,7 @@ export default function Home() {
           <h1
             className={`text-[32px] sm:text-[56px] md:text-[80px] lg:text-[96px] font-medium`}
           >
-            Luxury car detailing
+            Crystal car detailing
           </h1>
 
           <p className="text-[16px] sm:text-[18px] md:text-[20px]">
@@ -69,7 +77,7 @@ export default function Home() {
         <section className="w-full px-4 sm:px-8 md:px-12 lg:px-20 mt-14 md:mt-20">
           <div className="max-w-[1400px] mx-auto">
             <h3 className="text-[20px] sm:text-[24px] md:text-[28px] text-[#7a7575] font-medium">
-              Luxury car detailing
+              Crystal car detailing
             </h3>
             <hr className="my-5 border-t border-white/20" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-14 lg:gap-16 items-start">
@@ -77,7 +85,7 @@ export default function Home() {
                 Love in Every Detail
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-[#7a7575] max-w-[65ch]">
-                Immerse yourself in luxury with our bespoke detailing packages
+                Immerse yourself in crystal with our bespoke detailing packages
                 tailored to your car&apos;s unique needs. From meticulous paint
                 correction to deep interior treatments, we elevate every surface
                 to a showroom finish.
@@ -181,10 +189,10 @@ export default function Home() {
               </ul>
               <Link
                 href="/contact"
-                className="inline-flex items-center  text-white text-[18px] sm:text-[28px] mt-12 hover:text-white/70 transition"
+                className="inline-flex items-center  text-white text-[18px] sm:text-[28px] mt-12   hover:underline transition"
               >
-                Get a quote now{" "}
-                <span aria-hidden className="text-[28px] ml-2 leading-none">
+                ContactUS{" "}
+                <span aria-hidden className="text-[24px] ml-1 sm:ml-2 leading-none">
                   ↗
                 </span>
               </Link>
@@ -203,18 +211,19 @@ export default function Home() {
             />
             <div className="absolute w-[20%] left-0 top-0 h-full bg-gradient-to-r from-black to-transparent"></div>
             <div className="absolute w-[20%] right-0 top-0 h-full bg-gradient-to-l from-black to-transparent"></div>
+     
             <div className="absolute inset-0 flex items-start justify-end ">
               <div className="p-10 text-white z-10 space-y-1 ">
-                <h2 className="text-[24px]  sm:text-[58px] font-medium leading-tight text-white mb-2 ">
-                  Book your luxury <br /> car detailing today
+                <h2 className="text-[24px]  sm:text-[58px] font-medium leading-tight text-white sm:mb-2 mb-1 ">
+                  Book your crystal <br /> car detailing today
                 </h2>
-                <p className="text-[#b6b6b6] text-[14px] sm:text-[20px] ">
+                <p className="text-gray-100 text-[14px] sm:text-[20px] sm:mb-4 mb-1">
                   Click the link below. Fill out the details and <br />
                   we&apos;ll get back to you in less than 24 hours.
                 </p>
-              <Link href="/contact">  <button className="text-[18px] sm:text-[28px] font-medium text-white  hover:underline inset-ring-4 inset-ring-white p-2 rounded-2xl">
+              <Link href="/booking"><button className="text-[14px] sm:text-[28px] font-medium bg-[#1e1e1e] text-white  hover:underline inset-ring-4 inset-ring-white p-2 rounded-2xl">
                   Get a quote now
-                  <span className="ml-2 text-[20px] sm:text-[30px]">↗</span>
+                  <span className="ml-1 text-[14px] sm:text-[32px]">↗</span>
                 </button></Link>
               </div>
             </div>
@@ -261,7 +270,7 @@ export default function Home() {
         <section className="mt-6  p-4 ">
           <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12  ">
             <div>
-              <h2 className="text-[26px] font-medium">LuxureDetails</h2>
+              <h2 className="text-[26px] font-medium">CrystalDetails</h2>
               <p className="text-[17px] text-[#b6b6b6] leading-relaxed">
                 {" "}
                 Experience the prestige of a professionally detailed car,

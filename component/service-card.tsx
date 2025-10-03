@@ -19,7 +19,7 @@ interface ServiceCardProps {
   service: Service;
 }
 
-export function ServiceCard({ service }: ServiceCardProps) {
+export function ServiceCard({ service }: ServiceCardProps) {      
   const { addToCart } = useCart();
   const { toast } = useToast();
   const serviceImage = PlaceHolderImages.find(p => p.id === service.image);

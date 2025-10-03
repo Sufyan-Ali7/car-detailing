@@ -4,8 +4,8 @@ import { Testimonials } from '@/component/testimonials';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Services - AutoLux',
-  description: 'Explore our range of professional car detailing services.',
+  title: 'Our reviews - CrystalDetails',
+  description: "Read genuine customer reviews about Crystal Clear Auto Detailing. Discover why car owners trust us for premium detailing services.",
 };
 
 export default function PricingPage() {

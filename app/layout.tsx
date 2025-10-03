@@ -23,8 +23,13 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Luxury Car Detailing",
-  description: "Experience luxury car detailing with elegance and refinement.",
+  title: "Crystal Car Detailing",
+  description: "Experience crystal car detailing with elegance and refinement.",
+  icons: {
+    icon: "/car-icon.png", // your file inside public
+    shortcut: "/favicon.ico", 
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

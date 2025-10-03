@@ -11,7 +11,7 @@ export function Testimonials() {
         {/* Heading */}
         <div className="text-center">
           <h2 className="font-headline text-3xl sm:text-4xl font-medium md:text-4xl lg:text-6xl ">
-            Why Our Customers Trust LuxureDetails
+            Why Our Customers Trust CrystalDetails
           </h2>
           <p className="mx-auto mt-2 max-w-2xl text-md sm:text-lg md:text-lg lg:text-xl text-gray-300">
             Unmatched car detailing experiences, guaranteed.

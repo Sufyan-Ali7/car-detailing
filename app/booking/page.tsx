@@ -2,7 +2,7 @@ import { BookingForm } from '@/component/booking-form';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Book Your Service - AutoLux',
+  title: 'Book Your Service - CrystalDetails',
   description: 'Complete your booking for our professional car detailing services.',
 };
 

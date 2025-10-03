@@ -4,8 +4,8 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - AutoLux',
-  description: 'Get in touch with AutoLux for questions or to book your detailing service.',
+  title: 'Contact Us - CrystalDetails',
+  description: 'Get in touch with Crystal for questions or to book your detailing service.',
 };
 
 export default function ContactPage() {

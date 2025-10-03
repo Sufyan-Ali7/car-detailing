@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className='flex flex-col md:flex-row md:justify-between md:items-center py-6 px-4 text-white max-w-7xl mx-auto w-full'>
    {/* Logo + Mobile Menu Button */}
 <div className="flex items-center justify-between w-full md:w-auto">
-  <div className="text-[22px]">LuxureDetails</div>
+  <div className="text-[22px]">CrystalDetails</div>
 
   <button
   aria-label="Toggle menu"
