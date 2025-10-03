@@ -362,17 +362,18 @@ export function BookingForm() {
             </div>
           </CardContent>
           <CardFooter>
-            <button
-              type="submit"
-              className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl "
-              disabled={submitting || !availability?.isAvailable}
-            >
-              {submitting && (
-                <Loader2 className="mr-2 mt-4 h-4 w-4 animate-spin" />
-              )}
-              {submitting ? "Submitting..." : "Book Now (Pay After Service)"}
-            </button>
-          </CardFooter>
+  <button
+    type="submit"
+    className="w-full bg-[#1e1e1e] hover:bg-[#191919] transition-transform duration-300 hover:scale-105 py-3 rounded-2xl flex items-center justify-center gap-2"
+    disabled={submitting || !availability?.isAvailable}
+  >
+    {submitting && (
+      <Loader2 className="h-4 w-4 animate-spin" />
+    )}
+    {submitting ? "Submitting..." : "Book Now (Pay After Service)"}
+  </button>
+</CardFooter>
+
 
           {/* ✅ show feedback */}
           {success && (

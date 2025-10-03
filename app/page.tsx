@@ -249,14 +249,14 @@ export default function Home() {
               {/* Column 3 */}
               {/* <div className="space-y-4 text-left">
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Shoreline</div>
-                <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Tukwila</div>
+                    <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Tukwila</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• SeaTac</div>
                 <div className="text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[28px] font-medium">• Renton</div>       
             </div>
           </div>
           </div> */}
         {/* </section> */} 
-
+  
         {/* footer */}
         <section className="mt-6  p-4 ">
           <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-12  ">
@@ -276,7 +276,7 @@ export default function Home() {
                 </h3>
                 <ul className="space-y-3 text-[18px] font-light">
                   <li>
-                    <Link href="/" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
+                    <Link href="/services" className="hover:text-gray-300 hover:underline  hover:decoration-gray-300">
                       Service
                     </Link>
                   </li>

@@ -24,7 +24,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const addToCart = (service: Service): boolean => {
     let wasAdded = false;
 
-    setCartItems(prev => {
+    setCartItems(prev => {     
       const exists = prev.some(item => item.id === service.id);
       if (exists) return prev;
       wasAdded = true;

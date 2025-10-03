@@ -6,7 +6,7 @@ export const services: Service[] = [
     name: "Exterior Detailing",
     description:
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
-    price: 140,
+    price: 160,
     tag: "SUV",
     image: "exterior-detailing-suv",
     details: [
@@ -28,7 +28,7 @@ export const services: Service[] = [
     name: "Interior Detailing",
     description:
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
-    price: 170,
+    price: 180,
     tag: "SUV",
     image: "interior-detailing-suv",
     details: [
@@ -46,7 +46,7 @@ export const services: Service[] = [
     name: "Full Detailing",
     description:
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
-    price: 280,
+    price: 290,
     tag: "SUV",
     image: "full-detailing-suv",
     details: [
@@ -76,7 +76,7 @@ export const services: Service[] = [
     name: "Ceramic Coating",
     description:
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
-    price: 550,
+    price: "699+",
     tag: "SUV",
     image: "ceramic-coating-suv",
   },
@@ -85,7 +85,7 @@ export const services: Service[] = [
     name: "Paint Protection",
     description:
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
-    price: 350,
+    price: "999+",
     tag: "SUV",
     image: "paint-protection-suv",
   },
@@ -95,7 +95,7 @@ export const services: Service[] = [
     name: "Exterior Detailing",
     description:
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
-    price: 120,
+    price: 160,
     tag: "Sedan",
     image: "exterior-detailing-sedan",
     details: [
@@ -117,7 +117,7 @@ export const services: Service[] = [
     name: "Interior Detailing",
     description:
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
-    price: 150,
+    price: 160,
     tag: "Sedan",
     image: "interior-detailing-sedan",
     details: [
@@ -135,7 +135,7 @@ export const services: Service[] = [
     name: "Full Detailing",
     description:
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
-    price: 250,
+    price: 260,
     tag: "Sedan",
     image: "full-detailing-sedan",
     details: [
@@ -165,7 +165,7 @@ export const services: Service[] = [
     name: "Ceramic Coating",
     description:
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
-    price: 550,
+    price: "599+",
     tag: "Sedan",
     image: "ceramic-coating-sedan",
   },
@@ -174,7 +174,7 @@ export const services: Service[] = [
     name: "Paint Protection",
     description:
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
-    price: 350,
+    price: "899+",
     tag: "Sedan",
     image: "paint-protection-sedan",
   },
@@ -184,7 +184,7 @@ export const services: Service[] = [
     name: "Exterior Detailing",
     description:
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
-    price: 200,
+    price: 199,
     tag: "Truck",
     image: "exterior-detailing-truck",
     details: [
@@ -206,7 +206,7 @@ export const services: Service[] = [
     name: "Interior Detailing",
     description:
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
-    price: 160,
+    price: 180,
     tag: "Truck",
     image: "interior-detailing-truck",
     details: [
@@ -224,7 +224,7 @@ export const services: Service[] = [
     name: "Full Detailing",
     description:
       "The best of both worlds. A comprehensive interior and exterior detailing package.",
-    price: 320,
+    price: 350,
     tag: "Truck",
     image: "full-detailing-truck",
     details: [
@@ -254,7 +254,7 @@ export const services: Service[] = [
     name: "Ceramic Coating",
     description:
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
-    price: 550,
+    price: "899+",
     tag: "Truck",
     image: "ceramic-coating-truck",
   },
@@ -263,7 +263,7 @@ export const services: Service[] = [
     name: "Paint Protection",
     description:
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
-    price: 350,
+    price: "1099+",
     tag: "Truck",
     image: "paint-protection-truck",
   },
@@ -273,7 +273,7 @@ export const services: Service[] = [
     name: "Exterior Detailing",
     description:
       "A complete exterior wash, clay bar treatment, and wax for a brilliant shine and protection.",
-    price: "5-10 per foot",
+    price: "5-$10 per foot",
     tag: "Boat",
     image: "exterior-detailing-boat",
     details: [
@@ -299,7 +299,7 @@ export const services: Service[] = [
     name: "Interior Detailing",
     description:
       "Deep cleaning of all interior surfaces, including vacuuming, shampooing, and conditioning.",
-    price: "6-10 per foot",
+    price: "6-$10 per foot",
     tag: "Boat",
     image: "interior-detailing-boat",
     details: [
@@ -353,7 +353,7 @@ export const services: Service[] = [
     name: "Ceramic Coating",
     description:
       "A long-lasting ceramic coating for superior protection against scratches, UV rays, and contaminants.",
-    price: 550,
+    price: "999+ boat size",
     tag: "Boat",
     image: "ceramic-coating-boat",
   },
@@ -362,7 +362,7 @@ export const services: Service[] = [
     name: "Paint Protection",
     description:
       "Application of a durable paint sealant to protect your vehicle from the elements and maintain its gloss.",
-    price: 350,
+    price: "1199+ boat size" ,
     tag: "Boat",
     image: "paint-protection-boat",
   },

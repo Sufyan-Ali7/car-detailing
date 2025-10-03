@@ -81,7 +81,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 View More
               </button>
             </DialogTrigger>
-            <DialogContent className="max-w-3xl w-full h-[80vh] bg-black text-white rounded-2xl shadow-2xl overflow-y-auto">
+            <DialogContent className="max-w-3xl w-[80vw] h-[80vh] bg-black text-white rounded-2xl shadow-2xl overflow-y-auto">
               <DialogHeader>
                 <DialogTitle className="text-2xl">{service.name}</DialogTitle>
               </DialogHeader>
@@ -107,16 +107,22 @@ export function ServiceCard({ service }: ServiceCardProps) {
                 </ul>
               )}
 
-              <div className="flex justify-between items-center pt-4">
-                <p className="text-2xl font-medium text-white">${service.price}</p>
-                <button
-                  className="px-4 py-3 bg-[#1e1e1e] hover:bg-[#191919] rounded-2xl flex items-center transition-transform hover:scale-105"
-                  onClick={handleAddToCart}
-                >
-                  <PlusCircle className="mr-2 h-6 w-6" />
-                  <span className='text-lg'> Get a quote</span>
-                </button>
-              </div>
+<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 pt-4">
+  <p className="text-xl sm:text-2xl font-medium text-white">
+    ${service.price}
+  </p>
+  <button
+    onClick={handleAddToCart}
+    className="flex items-center justify-center rounded-2xl transition-transform hover:scale-105
+               w-full sm:w-auto
+               px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base 
+               bg-[#1e1e1e] hover:bg-[#191919]"
+  >
+    <PlusCircle className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+    <span className="text-sm sm:text-lg">Get a quote</span>
+  </button>
+</div>
+
             </DialogContent>
           </Dialog>
         )}
