@@ -18,11 +18,11 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="font-headline text-3xl sm:text-4xl font-medium md:text-4xl lg:text-6xl">
+          <h2 className="font-headline text-3xl sm:text-4xl font-medium md:text-4xl lg:text-6xl text-[#d9d9d9]">
             Why Our Customers Trust{" "}
-            <span className="">CrystalDetails</span>
+            <span className="text-[#d9d9d9]">CrystalDetails</span>
           </h2>
-          <p className="mx-auto mt-2 max-w-2xl text-md sm:text-lg md:text-lg lg:text-xl text-gray-300">
+          <p className="mx-auto mt-2 max-w-2xl text-md sm:text-lg md:text-lg lg:text-xl text-gray-400">
             Unmatched car detailing experiences, guaranteed.
           </p>
         </motion.div>
@@ -37,8 +37,8 @@ export function Testimonials() {
               viewport={{ once: true }}
               transition={{ delay: index * 0, duration: 0.5 }}
             >
-              <Card className="flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 bg-[#1e1e1e] border border-white/10 rounded-xl">
-                <CardContent className="flex flex-1 flex-col p-4 sm:p-6">
+              <Card className="flex flex-col h-75 transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gray-500/50 bg-[#000000] border border-white/70 rounded-xl">
+                <CardContent className="flex flex-1 flex-col p-4 sm:p-6 ">
                   <div className="flex-grow">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-300">
                       <Quote className="h-5 w-5 sm:h-6 sm:w-6 text-gray-500" />

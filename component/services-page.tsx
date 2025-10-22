@@ -22,10 +22,10 @@ export default function ServicesPage() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <h1 className="font-headline text-4xl font-medium md:text-5xl">
+        <h1 className="font-headline text-4xl font-medium md:text-5xl text-[#d9d9d9]">
           Our Detailing Services
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-gray-300">
+        <p className="mx-auto mt-4 max-w-2xl text-gray-400 lg:text-xl md:text-lg text-md ">
           From a simple wash to a full ceramic coating, we offer a wide range of
           services to keep your car looking its best.
         </p>

@@ -3,8 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import Card from "@/component/Card";
-import { CheckCircle, Crown, Diamond } from "lucide-react";
+import { ArrowLeft, CheckCircle, Crown, Diamond } from "lucide-react";
 import { motion } from "framer-motion";
+import { Arrow } from "@radix-ui/react-select";
 
 export default function HomeContent() {
   return (
@@ -27,15 +28,15 @@ export default function HomeContent() {
             radiating elegance and refinement at every turn.
           </p>
 
-          <Link
-            href="/contact"
-            className="mt-4 inline-flex items-center gap-2 px-5 py-2.5 text-xl sm:text-2xl font-medium text-white hover:text-white/60 transition"
-          >
+          <button
+                className="inline-flex items-center text-white text-[18px] sm:text-[28px] mt-12 hover:scale-105 hover:text-gray-300  transition"
+              >
+                <Link  href="/contact">
             {"Let\u2019s connect"}{" "}
-            <span aria-hidden className="text-4xl leading-none">
-              ↗
-            </span>
-          </Link>
+             
+                </Link>
+                  <ArrowLeft  className="text-[24px] ml-8 sm:ml-1 leading-none"/>
+              </button>
         </motion.div>
 
         {/* Hero Image */}
@@ -88,7 +89,7 @@ export default function HomeContent() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8 ">
               <motion.div whileHover={{ scale: 1.03 }}>
                 <Card
                   imageURL="/car3.png"
@@ -123,8 +124,8 @@ export default function HomeContent() {
           className="w-full px-4 sm:px-8 md:px-12 lg:px-20 mt-20 sm:mt-24 lg:mt-28"
         >
           <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1px_1.1fr] gap-10 lg:gap-14 items-start">
-            <div className="text-gray-300 px-11 ">
-              <h2 className="text-white text-left leading-tight font-medium text-[40px] sm:text-[56px] md:text-[52px] lg:text-[54px]">
+            <div className="text-[#d9d9d9] px-11 ">
+              <h2 className="text-[#d9d9d9] text-left leading-tight font-medium text-[40px] sm:text-[56px] md:text-[52px] lg:text-[54px]">
                 We will take good care of your car
               </h2>
               <Image
@@ -160,10 +161,10 @@ export default function HomeContent() {
                     <div className="flex items-start gap-4">
                       <Icon className="w-6 h-6 text-white mt-1" />
                       <div>
-                        <h3 className="text-white text-[24px] sm:text-[26px] font-medium">
+                        <h3 className="text-[#d9d9d9] text-[24px] sm:text-[26px] font-medium">
                           {title}
                         </h3>
-                        <p className="text-[#b6b6b6] text-[16px] sm:text-[18px] max-w-[60ch]">
+                        <p className="text-gray-300 text-[16px] sm:text-[18px] max-w-[60ch]">
                           {text}
                         </p>
                       </div>
@@ -172,18 +173,14 @@ export default function HomeContent() {
                   </motion.li>
                 ))}
               </ul>
-              <Link
-                href="/contact"
-                className="inline-flex items-center text-white text-[18px] sm:text-[28px] mt-12 hover:underline transition"
+              <button
+                className="inline-flex items-center text-white text-[18px] sm:text-[28px] mt-12 hover:scale-105 hover:text-gray-400  transition"
               >
-                ContactUS{" "}
-                <span
-                  aria-hidden
-                  className="text-[24px] ml-1 sm:ml-2 leading-none"
-                >
-                  ↗
-                </span>
-              </Link>
+                <Link  href="/contact">
+                ContactUs{" "}
+                </Link>
+                  <ArrowLeft  className="text-[24px] ml-8 sm:ml-1 leading-none"/>
+              </button>
             </div>
           </div>
         </motion.section>
@@ -205,28 +202,27 @@ export default function HomeContent() {
               className="w-full h-auto object-cover rounded-3xl"
             />
             <div className="absolute inset-0 flex items-start justify-end">
-              <div className="p-10 text-white z-10 space-y-1">
+              <div className="p-10 text-[#d9d9d9] z-10 space-y-1">
                 <h2 className="text-[24px] sm:text-[58px] font-medium leading-tight">
                   Book your crystal <br /> car detailing today
                 </h2>
-                <p className="text-gray-100 text-[14px] sm:text-[20px] sm:mb-4 mb-1">
+                <p className="text-gray-300 text-[14px] sm:text-[20px] sm:mb-4 mb-1">
                   Click the link below. Fill out the details and <br />
                   we&apos;ll get back to you in less than 24 hours.
                 </p>
-                <Link href="/booking">
                   <button
-                    className="text-[14px] sm:text-[20px] md:text-[24px] font-medium 
-             bg-gray-600/20 text-white 
-             px-6 py-3 rounded-2xl 
-             border border-white/20 
-             hover:bg-gray-500/20 hover:text-white 
-             transition-all duration-300 ease-in-out 
-             transform hover:scale-105"
+                    className="inline-flex items-center text-[14px] sm:text-[20px] md:text-[24px] font-medium 
+                    bg-gray-500/20 text-[#d9d9d9d]
+                    px-6 py-3 rounded-2xl 
+                    border border-white/20 
+                    hover:text-gray-300 
+                    transition hover:scale-105"
                   >
+                    <Link href="/booking">
                     Get a quote now
-                    <span className="ml-1 text-[14px] sm:text-[32px]">↗</span>
-                  </button>
                 </Link>
+                    <ArrowLeft className="ml-1 text-[14px] sm:text-[32px]"/>
+                  </button>
               </div>
             </div>
           </div>

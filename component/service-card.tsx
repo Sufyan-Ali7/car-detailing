@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { PlusCircle } from 'lucide-react';
+import { Car, PlusCircle } from 'lucide-react';
 import { useCart } from '@/context/cart-context';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import type { Service } from '@/types';
@@ -45,7 +45,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   };
 
   return (
-    <Card className="flex h-full flex-col overflow-hidden transition-transform duration-300 hover:scale-105 mx-auto">
+    <Card className="flex h-full flex-col overflow-hidden transition-transform duration-300 hover:scale-105 mx-auto font-medium shadow-xl hover:shadow-gray-500/40">
       <CardHeader className="p-0">
         {serviceImage && (
           <div className="relative h-86 w-full">
@@ -118,7 +118,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
                px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-base 
                bg-[#1e1e1e] hover:bg-[#191919]"
   >
-    <PlusCircle className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+    <Car className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
     <span className="text-sm sm:text-lg">Get a quote</span>
   </button>
 </div>

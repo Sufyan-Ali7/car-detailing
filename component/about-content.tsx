@@ -31,7 +31,7 @@ export default function AboutContent() {
             Your satisfaction is our priority — because every vehicle deserves that crystal-clear finish.
           </p>
 
-       <Link href="/contact"> <button className="mt-4 text-gray-300 hover:text-gray-400 transition px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-gray-500/40">
+       <Link href="/contact"> <button className="mt-4 text-gray-300  transition hover:scale-105 px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-gray-500/40 ">
        ContactUS{" "}
                 <span aria-hidden className="text-[24px] ml-1 sm:ml-2 leading-none">
                   ↗
@@ -55,7 +55,7 @@ export default function AboutContent() {
               height={400}
               className="rounded-2xl shadow-2xl object-cover"
             />
-            <div className="absolute bottom-4 left-4 bg-[#1e1e1e] px-6 py-4 rounded-xl shadow-lg">
+            <div className="absolute bottom-4 left-4 bg-[#000000] border border-white/70 px-6 py-4 rounded-xl shadow-lg">
               <h3 className="text-3xl font-medium">14+</h3>
               <p className="uppercase text-sm tracking-widest font-medium">Years Experience</p>
             </div>
@@ -64,7 +64,7 @@ export default function AboutContent() {
       </section>
 
       {/* 🔹 ADD YOUR SECOND SECTION HERE */}
-      <section className="bg-black text-gray-200 py-16 px-6 md:px-20 grid md:grid-cols-3 gap-10">
+      <section className="bg-[#000000]  text-gray-200 py-16 px-6 md:px-20 grid md:grid-cols-3 gap-10">
         {[
           { title: "Precision Detailing", desc: "Every inch cleaned and polished with care." },
           { title: "Premium Products", desc: "We use only top-quality detailing materials." },
@@ -73,7 +73,7 @@ export default function AboutContent() {
           <motion.div 
             key={i}
             whileHover={{ scale: 1.05 }}
-            className="bg-[#1e1e1e] rounded-2xl p-8 shadow-lg border border-white/10"
+            className="bg-[#000000] rounded-2xl p-8 shadow-md hover:shadow-gray-300 border border-white/70 "
           >
             <h3 className="text-xl font-medium text-white mb-2">{item.title}</h3>
             <p className="text-gray-300">{item.desc}</p>
